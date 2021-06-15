@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/roboto-v27-latin-300.woff") format('woff'), url('fonts/roboto-v27-latin-300.ttf') format('truetype');
+    /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url("fonts/roboto-v27-latin-regular.woff") format('woff'), url('fonts/roboto-v27-latin-regular.ttf') format('truetype');
+    /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url("fonts/roboto-condensed.woff") format('woff'), url('fonts/roboto-condensed.ttf') format('truetype');
+    /* Safari, Android, iOS */
+}
+
+ :root {
+    --main-color: #415C79;
+    --secondary-color: #4B8FD6;
+    --accent-color: #CDDAE8;
+    --read-color: #A2D986;
+    --unread-color: #F3E560;
+    --urgent-color: #D98777;
+    --neutral-color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+}

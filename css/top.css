@@ -1,0 +1,42 @@
+.top-bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 0.2fr;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    padding: 0.4rem;
+    gap: 0.2rem;
+    grid-template-areas: "logo . . . link";
+}
+
+.top-bar div,
+.top-bar a,
+.top-bar img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.logo-icon {
+    max-width: 4rem;
+    margin: 0 0 0 1rem;
+}
+
+.logo-text {
+    margin: 0 2rem 0 2rem;
+    font-family: RobotoCondensed;
+    font-size: 4rem;
+}
+
+.top-bar a {
+    color: var(--main-color);
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.top-bar-links {
+    grid-area: link;
+}
