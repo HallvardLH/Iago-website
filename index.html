@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>HMS-App</title>
+    <link rel="icon" href="images/iago-logo.png" sizes="8x16" type="image/png">
+    <title>IAGO</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -16,15 +16,26 @@
         <div class="logo">
             <img class="logo-icon" src="images/iago-logo.png" />
             <span class="logo-text">
-                &#60;/IAGO&#62;
+               <h1>&#60;/IAGO&#62;</h1>
             </span>
         </div>
         <div class="top-bar-links">
-            <a href="# " class="top-link ">Hjem</a>
-            <a href="# " class="top-link ">Våre tjenester</a>
-            <a href="# " class="top-link ">Produkter</a>
-            <a href="# " class="top-link ">Om Iago</a>
+            <a id="link-0" href="# " class="top-link" onclick="underline(this.id)">Kontakt oss</a>
+            <a id="link-1" href="# " class="top-link" onclick="underline(this.id)">Våre tjenester</a>
+            <a id="link-2" href="# " class="top-link" onclick="underline(this.id)">Produkter</a>
+            <a id="link-3" href="# " class="top-link" onclick="underline(this.id)">Om Iago</a>
         </div>
     </div>
+    <div class="img-wrapper">
+        <div class="img-overlay">
+            <div class="overlay-content">
+                <div class="overlay-text-large">Skreddersydde IT-løsninger</div>
+                <div class="overlay-text-small">IAGO lager programvare, nettsider og verktøy som er tilpasset for deg.</div>
+                <button class="overlay-button">Kontakt oss</button>
+            </div>
+        </div>
+        <img class="background-image" id="background-image" src="images/stock1.svg">
     </div>
 </body>
+
+<script src="js/main.js"></script>
