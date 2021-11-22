@@ -1,0 +1,43 @@
+.sidenav {
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.3s;
+    top: 0;
+    z-index: 3;
+}
+
+
+/* NEW DESIGN */
+
+.sidenav-top {
+    color: var(--light-gray-color);
+    padding: 2.5rem 1rem 1rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidenav-username {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.sidenav-email {
+    font-size: 1rem;
+}
+
+.sidenav-buttons {
+    color: var(--light-gray-color) !important;
+}
+
+.sidenav-button {
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+    gap: 20px;
+    padding: 1rem;
+}
+
+.sidenav-button-text {
+    align-self: center;
+}

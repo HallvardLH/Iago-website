@@ -12,6 +12,7 @@
 .top-bar a {
     color: var(--main-color);
     margin: 0 2rem 0 2rem;
+    font-size: 1.6vw;
 }
 
 @media only screen and (max-width: 900px) {
@@ -64,6 +65,12 @@
     transform: scale(1.2, 1.2);
     transition: 0.4s ease;
 }
+
+
+/* 
+.top-bar a:focus {
+    outline: 1px dotted white;
+} */
 
 a {
     text-decoration: none;
