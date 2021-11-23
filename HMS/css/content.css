@@ -1,0 +1,88 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: 0.2fr 0.4fr 0.4fr;
+}
+
+.content-section {
+    margin: 20px;
+}
+
+
+/* BUTTONS USED TO SWITCH BETWEEN GRAPHS */
+
+.top-button-container {
+    /* display: grid;
+    grid-template-columns: 0.33fr 0.33fr 0.33fr;
+    gap: 2vw; */
+    display: flex;
+    justify-content: center;
+    gap: 3.5vw;
+}
+
+.top-button {
+    /* align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
+    border-radius: 0.35rem; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.35rem;
+    width: 10vw;
+    height: 10vw;
+}
+
+.top-button-selected {
+    color: white;
+    background-color: var(--main-color);
+}
+
+.top-button-unselected {
+    color: var(--light-gray-color);
+    background-color: white;
+}
+
+.top-button-icon {
+    padding: 0.5rem;
+    font-size: 2vw;
+    user-select: none;
+}
+
+.top-button-main-text {
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+
+.top-button-sub-text {
+    padding-top: 1rem;
+    font-size: 0.8vw;
+    letter-spacing: 0.5px;
+}
+
+
+/* GRAPH CANVAS */
+
+.graph-canvas {
+    box-shadow: var(--box-shadow);
+    padding: 0.5rem;
+    margin-top: 2rem;
+    width: 100% !important;
+    /* height: 30vh !important; */
+    box-sizing: border-box;
+}
+
+
+/* CALENDAR */
+
+.calendar {
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    height: 40%;
+    margin: 20px 20px 20px 0;
+}

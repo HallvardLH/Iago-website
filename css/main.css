@@ -27,7 +27,8 @@
     --dark-gray-color: #282828;
     --light-gray-color: #636365;
     --border-color: #ebebeb;
-    --highlight-color: #F6F0FE;
+    --highlight-color: #e6def2;
+    --box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
 }
 
 html {
@@ -41,5 +42,5 @@ html {
 body {
     margin: 0;
     font-family: Roboto;
-    background-color: #C4C4C4;
+    /* background-color: #C4C4C4; */
 }

@@ -8,53 +8,101 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <link href="../css/navigation.css" rel="stylesheet" type="text/css">
-    <title>HMS dashboard</title>
+    <link href="css/navigation.css" rel="stylesheet" type="text/css">
+    <link href="css/content.css" rel="stylesheet" type="text/css">
+    <title>Iago HMS dashboard</title>
 </head>
 
 <body>
-    <div id="sidenav" class="sidenav">
-        <div class="sidenav-top">
-            <div id="ikke_logget_inn" class="sidenav-username">
-                Hallvard Hetlelid
+    <div class="main-grid">
+        <div id="sidenav" class="sidenav">
+            <div class="sidenav-top">
+                <div id="ikke_logget_inn" class="sidenav-username">
+                    Hallvard Hetlelid
+                </div>
+                <div id="sidenav-email" class="sidenav-email">
+                    sample@iago.no
+                </div>
             </div>
-            <div id="sidenav-email" class="sidenav-email">
-                sample@iago.no
+            <div class="sidenav-buttons">
+                <div class="sidenav-button sidenav-button-selected">
+                    <i class="material-icons sidenav-button-icon">dashboard</i>
+                    <div id="min_bruker" class="sidenav-button-text">
+                        Dashboard
+                    </div>
+                </div>
+                <div class="sidenav-button sidenav-button-unselected">
+                    <i class="material-icons sidenav-button-icon">admin_panel_settings</i>
+                    <div id="innstillinger" class="sidenav-button-text">
+                        Administrer brukere
+                    </div>
+                </div>
+                <div class="sidenav-button sidenav-button-unselected">
+                    <i class="material-icons sidenav-button-icon">help</i>
+                    <div id="iago_hjelp" class="sidenav-button-text">
+                        Iago Hjelp
+                    </div>
+                </div>
+                <div class="sidenav-button sidenav-button-unselected">
+                    <i class="material-icons sidenav-button-icon">settings</i>
+                    <div id="om_iago" class="sidenav-button-text">
+                        Innstillinger
+                    </div>
+                </div>
+                <div class="sidenav-button sidenav-button-unselected">
+                    <i class="material-icons sidenav-button-icon">logout</i>
+                    <div id="logg_ut" class="sidenav-button-text">
+                        Logg ut
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="sidenav-buttons">
-            <div class="sidenav-button">
-                <i class="material-icons sidenav-button-icon">account_circle</i>
-                <div id="min_bruker" class="sidenav-button-text">
-                    Min bruker
+        <div class="content-section">
+            <div class="graph-section">
+                <div class="top-button-container">
+                    <div id="kostnad-graph-button" class="top-button top-button-selected" onclick="UI.switch_graph('kostnad')">
+                        <i class="material-icons top-button-icon">attach_money</i>
+                        <div class="top-button-main-text">
+                            504 379 NOK
+                        </div>
+                        <div class="top-button-sub-text">
+                            Kostnad
+                        </div>
+                    </div>
+
+                    <div id="rapporter-graph-button" class="top-button top-button-unselected" onclick="UI.switch_graph('rapporter')">
+                        <i class="material-icons top-button-icon">apps</i>
+                        <div class="top-button-main-text">
+                            73
+                        </div>
+                        <div class="top-button-sub-text">
+                            Rapporter
+                        </div>
+                    </div>
+
+                    <div id="ubehandlede-rapporter-graph-button" class="top-button top-button-unselected" onclick="UI.switch_graph('ubehandlede-rapporter')">
+                        <i class="material-icons top-button-icon">warning</i>
+                        <div class="top-button-main-text">
+                            9
+                        </div>
+                        <div class="top-button-sub-text">
+                            Ubehandlede rapporter
+                        </div>
+                    </div>
                 </div>
+                <canvas class="graph-canvas" id="line-graph"></canvas>
+                <canvas class="graph-canvas" id="bar-graph"></canvas>
             </div>
-            <div onclick="UI.switchMenu('settingsMenu')" class="sidenav-button">
-                <i class="material-icons sidenav-button-icon">settings</i>
-                <div id="innstillinger" class="sidenav-button-text">
-                    Innstillinger
-                </div>
-            </div>
-            <div onclick="" class="sidenav-button">
-                <i class="material-icons sidenav-button-icon">help</i>
-                <div id="iago_hjelp" class="sidenav-button-text">
-                    Iago Hjelp
-                </div>
-            </div>
-            <div onclick="" class="sidenav-button">
-                <i class="material-icons sidenav-button-icon">error_outline</i>
-                <div id="om_iago" class="sidenav-button-text">
-                    Om Iago
-                </div>
-            </div>
-            <div onclick="authentication.SignOut()" class="sidenav-button">
-                <i class="material-icons sidenav-button-icon">logout</i>
-                <div id="logg_ut" class="sidenav-button-text">
-                    Logg ut
-                </div>
-            </div>
+        </div>
+        <div class="calendar">
+
         </div>
     </div>
 </body>
 
 </html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js"></script>
+<script src="../js/helper_functions.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/chart.js"></script>
