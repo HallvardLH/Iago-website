@@ -28,7 +28,11 @@
     --light-gray-color: #636365;
     --border-color: #ebebeb;
     --highlight-color: #e6def2;
+    --background-color: #F7F7FC;
     --box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+    --small-text: calc(0.5vw + 0.5vh);
+    --medium-text: calc(0.65vw + 0.65vh);
+    --big-text: calc(0.8vw + 0.8vh);
 }
 
 html {
@@ -42,5 +46,9 @@ html {
 body {
     margin: 0;
     font-family: Roboto;
-    /* background-color: #C4C4C4; */
+    background-color: var(--background-color);
+}
+
+i {
+    user-select: none;
 }

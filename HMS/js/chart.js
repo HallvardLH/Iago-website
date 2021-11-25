@@ -1,16 +1,20 @@
 const chart = {
 
     update_graph_request: function() {
-        networking.HTTPToDB({"query": {
-            "date_sent": { 
-                "$gte":"1636929574072","$lt":"9637678645752"
+        networking.HTTPToDB({
+            "query": {
+                "date_sent": {
+                    "$gte": "1636929574072",
+                    "$lt": "9637678645752"
                 }
             }
         }, "reports", chart.clean_data, "data", "albretsenconsulting");
     },
 
     clean_data: function(string_data) {
-        let data = [], labels = [], label = "";
+        let data = [],
+            labels = [],
+            label = "";
 
         JSON_data = JSON.parse(string_data);
 
@@ -30,7 +34,7 @@ const chart = {
 
         chart.update_graph(chart.line_graph_instance, labels.reverse(), data.reverse(), label);
     },
-    
+
     line_graph_instance: new Chart(document.getElementById('line-graph'), {
         type: 'line',
         data: {

@@ -1,11 +1,13 @@
 .sidenav {
     height: 100%;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.3s;
-    top: 0;
-    z-index: 3;
     border-right: 1px solid var(--border-color);
+    position: fixed;
+    width: 16vw;
+    top: 0;
+}
+
+.sidenav a {
+    text-decoration: none;
 }
 
 
@@ -13,28 +15,29 @@
 
 .sidenav-top {
     color: var(--light-gray-color);
-    padding: 2.5rem 1rem 1rem 1rem;
+    padding: 25px 1rem 1rem 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 .sidenav-username {
-    font-size: 1.5rem;
+    font-size: calc(var(--big-text) + 0.1vw);
     font-weight: 600;
 }
 
 .sidenav-email {
-    font-size: 1rem;
+    font-size: var(--medium-text);
 }
 
 .sidenav-button {
     display: grid;
     grid-template-columns: 0.1fr 0.9fr;
-    gap: 20px;
-    padding: 1rem;
+    gap: 1vw;
+    padding: 1vw 0.2vw 1vw 1vw;
 }
 
 .sidenav-button-text {
     align-self: center;
+    font-size: var(--medium-text);
 }
 
 .sidenav-button-selected {
@@ -44,5 +47,4 @@
 
 .sidenav-button-unselected {
     color: var(--light-gray-color) !important;
-    background-color: white;
 }
