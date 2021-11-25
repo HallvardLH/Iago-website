@@ -54,7 +54,7 @@ const chart = {
                     display: false
                 }
             },
-            responsive: false,
+            responsive: true,
             scales: {
                 y: {
                     beginAtZero: true
