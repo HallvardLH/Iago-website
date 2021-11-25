@@ -32,7 +32,7 @@ const chart = {
             labels.push(key);
         }
 
-        chart.update_graph(chart.line_graph_instance, labels, data, label);
+        chart.update_graph(chart.line_graph_instance, labels.reverse(), data.reverse(), label);
     },
 
     line_graph_instance: new Chart(document.getElementById('line-graph'), {
