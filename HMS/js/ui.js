@@ -1,5 +1,6 @@
 const UI = {
     button_names: ["kostnad", "rapporter", "ubehandlede-rapporter"],
+    current_button: "kostnad",
     switch_graph(graph) {
 
         // Loop through and set normal classes for all elements
@@ -9,6 +10,8 @@ const UI = {
 
         // Add selected class
         byId(`${graph}-graph-button`).setAttribute("class", "top-button top-button-selected");
+        this.current_button = graph;
+        chart.update_graph_request();
     },
 
 
