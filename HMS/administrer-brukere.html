@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/navigation.css" rel="stylesheet" type="text/css">
+    <link href="css/users.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="sidenav" class="sidenav">
+        <div class="sidenav-top">
+            <div id="ikke_logget_inn" class="sidenav-username">
+                Hallvard Hetlelid
+            </div>
+            <div id="sidenav-email" class="sidenav-email">
+                sample@iago.no
+            </div>
+        </div>
+        <div class="sidenav-buttons">
+            <a href="dashboard.html" class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">dashboard</i>
+                <div id="min_bruker" class="sidenav-button-text">
+                    Dashboard
+                </div>
+            </a>
+            <a href="administrer-brukere.html" class="sidenav-button sidenav-button-selected">
+                <i class="material-icons sidenav-button-icon">admin_panel_settings</i>
+                <div id="innstillinger" class="sidenav-button-text">
+                    Administrer brukere
+                </div>
+            </a>
+            <div class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">help</i>
+                <div id="iago_hjelp" class="sidenav-button-text">
+                    Iago Hjelp
+                </div>
+            </div>
+            <div class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">settings</i>
+                <div id="om_iago" class="sidenav-button-text">
+                    Innstillinger
+                </div>
+            </div>
+            <div class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">logout</i>
+                <div id="logg_ut" class="sidenav-button-text">
+                    Logg ut
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="users-container">
+        <div class="users-top">
+            <div class="users-search">
+                <i class="material-icons users-search-icon">search</i>
+                <input type="text" class="users-search-bar" placeholder="Søk etter navn eller email..." />
+            </div>
+            <div class="new-report-button" onclick="">
+                <i class="material-icons new-report-icon">add</i>
+                <div id="ny_bruker" class="new-report-button-text">
+                    NY BRUKER
+                </div>
+            </div>
+            <i class="material-icons relaod">refresh</i>
+        </div>
+        <div class="users-list users-list-top">
+            <input class="users-list-checkbox" type="checkbox" />
+            <div class="users-list-name">
+                Navn
+            </div>
+            <div class="users-list-email">
+                Email
+            </div>
+            <div class="users-list-password">
+                Passord
+            </div>
+            <div class="users-list-administrator">
+                Administrator
+            </div>
+            <div class="users-list-delete-user">
+                Slett bruker
+            </div>
+        </div>
+        <div id="users-list-anchor" class="users-list-anchor"></div>
+        <div class="users-list-bottom-container">
+            <div class="users-list-bottom">
+                <div>
+                    Rader per side
+                </div>
+                <div class="users-list-dropdown">
+                    <div>10</div>
+                    <i class="material-icons">arrow_drop_down</i>
+                </div>
+                <div>
+                    1-10 av 39
+                </div>
+                <div class="users-list-bottom-arrows">
+                    <i class="material-icons">first_page</i>
+                    <i class="material-icons">chevron_left</i>
+                    <i class="material-icons">chevron_right</i>
+                    <i class="material-icons">last_page</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script src="../js/helper_functions.js"></script>
+<script src="js/users.js"></script>

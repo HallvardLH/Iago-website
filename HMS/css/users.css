@@ -1,0 +1,143 @@
+/* NY BRUKER BUTTON */
+
+.new-report-button {
+    display: grid !important;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.5vw;
+    background-color: var(--main-color);
+    border-radius: 20vw;
+    padding: 0.1vh 1vw;
+    color: white;
+    box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 25%);
+    white-space: nowrap;
+}
+
+.new-report-button-text {
+    align-self: center;
+    justify-self: center;
+    font-size: var(--big-text);
+}
+
+.new-report-icon {
+    align-self: center;
+    justify-self: center;
+    font-size: calc(var(--big-text) * 2);
+    color: white !important;
+}
+
+
+/* USERS LIST */
+
+.users-container {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    left: 16vw;
+    width: 78vw;
+    padding: 1vw;
+    margin: 2vw;
+    height: 85vh;
+    max-height: 85vh;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.users-top {
+    display: grid;
+    grid-template-columns: 60vw 1fr 0.25fr;
+    gap: 2vw;
+}
+
+.users-top div,
+.users-top input,
+.users-top i {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.users-top i {
+    color: #706f6f;
+}
+
+.users-search-icon {
+    top: 4vh;
+    left: 2vw;
+    position: absolute;
+    font-size: calc(var(--big-text) * 1.5);
+}
+
+.users-search-bar {
+    width: 90%;
+    padding: 2vh 1.5vw 2vh 4vw;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+}
+
+.users-search-bar:focus {
+    transition: 50ms;
+    outline: 2px solid var(--main-color);
+}
+
+.users-list {
+    display: grid;
+    grid-template-columns: 0.1fr repeat(5, 1fr);
+    margin-top: 2vh;
+    color: #706f6f;
+    font-weight: 600;
+}
+
+.users-list-top {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2vh;
+}
+
+.users-list>* {
+    margin-left: 2vw;
+    align-self: center;
+}
+
+.users-list-checkbox {
+    align-self: center;
+    margin-left: 0.3vw;
+    zoom: 1.5;
+}
+
+.user-link {
+    color: #2F80ED;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.users-list-anchor {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* BOTTOM  */
+
+.users-list-bottom-container {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.users-list-bottom {
+    display: grid;
+    grid-template-columns: 0.8fr 0.6fr 0.8fr 1fr;
+    width: 50%;
+}
+
+.users-list-bottom>* {
+    align-self: center;
+    justify-self: center;
+}
+
+.users-list-dropdown {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+}

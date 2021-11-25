@@ -1,6 +1,9 @@
 .main-grid {
     display: grid;
-    grid-template-columns: 0.2fr 0.4fr 0.4fr;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    left: 16vw;
+    width: 82vw;
 }
 
 .content-section {
@@ -36,32 +39,33 @@
     border-radius: 0.35rem;
     width: 10vw;
     height: 10vw;
+    cursor: pointer;
 }
 
 .top-button-selected {
-    color: white;
+    color: var(--background-color);
     background-color: var(--main-color);
 }
 
 .top-button-unselected {
     color: var(--light-gray-color);
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 .top-button-icon {
-    padding: 0.5rem;
-    font-size: 2vw;
+    padding-bottom: calc(0.6vw + 0.6vh);
+    font-size: calc(var(--big-text) * 1.6);
     user-select: none;
 }
 
 .top-button-main-text {
     font-weight: 600;
-    font-size: 1.2vw;
+    font-size: var(--big-text);
 }
 
 .top-button-sub-text {
-    padding-top: 1rem;
-    font-size: 0.8vw;
+    padding-top: calc(0.6vw + 0.6vh);
+    font-size: var(--small-text);
     letter-spacing: 0.5px;
 }
 

@@ -11,14 +11,22 @@ const chart = {
                     data: [65, 59, 80, 81, 56, 55, 40],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
-                    tension: 0.5
+                    tension: 0.4
                 }]
             },
             options: {
-                responsive: false,
+                responsive: true,
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        grid: {
+                            display: true
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
                     }
                 }
             }
