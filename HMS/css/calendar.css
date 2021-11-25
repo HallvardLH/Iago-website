@@ -1,0 +1,36 @@
+.calendar {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 1fr;
+    padding: 2vh 0;
+}
+
+.calendar-top {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    margin-bottom: 4vh;
+    font-weight: 600;
+    font-family: RobotoRegular;
+    letter-spacing: 0.5px;
+}
+
+.calendar-top>*,
+.calendar-days>*,
+.calendar-dates>* {
+    justify-self: center;
+    align-self: center;
+}
+
+.calendar-dates>div {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 30%;
+    height: 40%;
+    text-align: center;
+}
+
+.calendar-days,
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}

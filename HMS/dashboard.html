@@ -10,7 +10,7 @@
     <link href="../css/main.css" rel="stylesheet" type="text/css">
     <link href="css/navigation.css" rel="stylesheet" type="text/css">
     <link href="css/content.css" rel="stylesheet" type="text/css">
-    <link href="css/date-pick.css" rel="stylesheet" type="text/css">
+    <link href="css/calendar.css" rel="stylesheet" type="text/css">
     <title>Iago HMS dashboard</title>
 </head>
 
@@ -96,19 +96,23 @@
             </div>
         </div>
         <div class="calendar">
-            <div class="example">
-                <form>
-                    <input id="date-picker-input" class="date-input center-block" type="text" placeholder="Input a date" />
-                    <button id="save-button" class="btn center-block" type="submit" disabled>Save</button>
-                </form>
+            <div class="calendar-top">
+                <i class="material-icons">chevron_left</i>
+                <div>Mai 2019</div>
+                <i class="material-icons">chevron_right</i>
             </div>
-
-            <div id="date-pick-container"></div>
-</body>
-
-</html>
-</div>
-</div>
+            <div class="calendar-days">
+                <div>Man</div>
+                <div>Tir</div>
+                <div>Ons</div>
+                <div>Tor</div>
+                <div>Fre</div>
+                <div>Lør</div>
+                <div>Søn</div>
+            </div>
+            <div class="calendar-dates" id="calendar-dates"></div>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -118,4 +122,4 @@
 <script src="../js/networking.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/chart.js"></script>
-<script src="js/date-pick.js"></script>
+<script src="js/calendar.js"></script>

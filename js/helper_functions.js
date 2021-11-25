@@ -71,3 +71,27 @@ function timeSince(date) {
     s += " " + i18n.get("siden");
     return s;
 }
+
+/**
+ * 
+ * @param {JavaScript sting} type, {JavaScript array} attributes, {JavaScript sting"} text.
+ * type is the kind of element.
+ * the attributes are the element's attributes, first the attribute name, then the attribute value, the come in pair of two.
+ * text contains a string of text that goes inside the element
+ * @returns Returns an element node with all attributes and text added.
+ */
+function create_element(type, attributes, text) {
+    const elem = document.createElement(type);
+    if (attributes) {
+        for (var i = 0; i < attributes.length; i += 2) {
+            elem.setAttribute(attributes[i], attributes[i + 1]);
+        }
+    }
+
+    if (text) {
+        const text_node = document.createTextNode(text);
+        elem.appendChild(text_node);
+    }
+
+    return elem
+}
