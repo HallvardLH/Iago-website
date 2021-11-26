@@ -33,6 +33,18 @@ const chart = {
         }
 
         chart.update_graph(chart.line_graph_instance, labels.reverse(), data.reverse(), label);
+        chart.update_buttons(JSON_data);
+    },
+
+    update_buttons: function(JSON_data) {
+        let cost = [],
+            amount_of_reports = [];
+        for (const key in JSON_data) {
+            cost.push(JSON_data[key].cost);
+            amount_of_reports.push(JSON_data[key].amount_of_reports);
+        }
+        byId("total-cost").innerHTML = cost.reduce((a, b) => a + b, 0).toLocaleString() + " NOK";
+        byId("total-reports").innerHTML = amount_of_reports.reduce((a, b) => a + b, 0).toLocaleString();
     },
 
     line_graph_instance: new Chart(document.getElementById('line-graph'), {
