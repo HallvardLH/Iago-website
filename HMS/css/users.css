@@ -16,13 +16,13 @@
 .new-report-button-text {
     align-self: center;
     justify-self: center;
-    font-size: var(--big-text);
+    font-size: var(--small-text);
 }
 
 .new-report-icon {
     align-self: center;
     justify-self: center;
-    font-size: calc(var(--big-text) * 2);
+    font-size: calc(var(--small-text) * 2);
     color: white !important;
 }
 
@@ -63,8 +63,7 @@
 }
 
 .users-search-icon {
-    top: 4vh;
-    left: 2vw;
+    left: 1.5vw;
     position: absolute;
     font-size: calc(var(--big-text) * 1.5);
 }
@@ -85,7 +84,7 @@
 .users-list {
     display: grid;
     grid-template-columns: 0.1fr repeat(5, 1fr);
-    margin-top: 2vh;
+    padding: 1vh 0;
     color: #706f6f;
     font-weight: 600;
 }
@@ -115,6 +114,10 @@
 .users-list-anchor {
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+.users-darker-background {
+    background-color: #f0f0f3;
 }
 
 

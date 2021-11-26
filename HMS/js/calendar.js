@@ -21,16 +21,34 @@ const calendar = {
 
 
     test_date: new Date(),
+    /**
+     * 
+     * @param {A JavaScript Date object} date 
+     * Creates the calendar HTML.
+     */
     create_calendar_html: function(date) {
-        for (var i = 0; i < 0; i++) { // this.get_start_day(date)
+        for (var i = 0; i < 1; i++) { // this.get_start_day(date) // This did not quite work, placed 1 there instead for testing
+            console.log("Test")
             const blank = create_element("DIV");
             byId("calendar-dates").appendChild(blank);
         }
 
-        for (var i = 0; i < this.days_in_month(date); i++) {
-            const date_elem = create_element("DIV", [], i);
+        for (var i = 1; i < this.days_in_month(date); i++) {
+            const date_elem = create_element("DIV", ["id", `date-${i}`, "onclick", `calendar.pick_date(${i})`, "onmouseover", `calendar.highlight_date(${i})`], i);
             byId("calendar-dates").appendChild(date_elem);
         }
+    },
+
+    start_date: false,
+    end_date: false,
+    pick_date: function(i) {
+        if (!this.start_date) {
+
+        }
+    },
+
+    highlight_date: function(i) {
+
     },
 }
 

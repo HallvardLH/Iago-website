@@ -6,6 +6,10 @@ const users = {
     create_user_html: function(user) {
         const list = create_element("DIV", ["class", "users-list"]);
 
+        if (i % 2 == 1) { // Adds a slightly darker background to every other element
+            list.setAttribute("class", "users-list users-darker-background");
+        }
+
         const select_checkbox = create_element("INPUT", ["type", "checkbox", "class", "users-list-checkbox"]);
         list.appendChild(select_checkbox);
 
