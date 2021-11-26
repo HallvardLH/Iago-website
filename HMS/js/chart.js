@@ -4,7 +4,7 @@ const chart = {
         networking.HTTPToDB({
             "query": {
                 "date_sent": {
-                    "$gte": "1636929574072",
+                    "$gte": "0636929574072",
                     "$lt": "9637678645752"
                 }
             }
