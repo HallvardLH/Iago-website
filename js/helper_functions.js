@@ -101,3 +101,7 @@ function addDays(date, days) {
     result.setDate(result.getDate() + days);
     return result;
 }
+
+function isValidDate(date) {
+    return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
+}

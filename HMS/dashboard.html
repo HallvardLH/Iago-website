@@ -94,11 +94,11 @@
                 <div class="date-input-container">
                     <div class="input-field-container">
                         <div class="info-header">Fra dato</div>
-                        <input type="date" class="date-input" />
+                        <input id="start_date" onchange="chart.handle_date_change()" type="date" class="date-input" />
                     </div>
                     <div class="input-field-container">
                         <div class="info-header">Til dato</div>
-                        <input type="date" class="date-input" />
+                        <input id="end_date" onchange="chart.handle_date_change()" type="date" class="date-input" />
                     </div>
                 </div>
                 <canvas class="graph-canvas" id="line-graph"></canvas>
