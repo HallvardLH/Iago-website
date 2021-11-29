@@ -1,6 +1,6 @@
 .main-grid {
     display: grid;
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns: 1.5fr 1fr;
     position: relative;
     left: 16vw;
     width: 82vw;
@@ -18,7 +18,7 @@
     grid-template-columns: 0.33fr 0.33fr 0.33fr;
     gap: 2vw; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 3.5vw;
 }
 
@@ -76,7 +76,6 @@
 .graph-canvas {
     box-shadow: var(--box-shadow);
     padding: 0.5rem;
-    margin-top: 2rem;
     width: 100% !important;
     /* height: 30vh !important; */
     box-sizing: border-box;

@@ -30,9 +30,9 @@
     --highlight-color: #e6def2;
     --background-color: #F7F7FC;
     --box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
-    --small-text: 2.2vmin;
-    --medium-text: 2.5vmin;
-    --big-text: 3vmin;
+    --small-text: 1vw;
+    --medium-text: 1.2vw;
+    --big-text: 1.6vw;
 }
 
 html {
@@ -51,4 +51,15 @@ body {
 
 i {
     user-select: none;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: var(--secondary-color);
+}
+
+ ::selection {
+    color: white;
+    background: var(--secondary-color);
 }

@@ -74,6 +74,7 @@
     border: 2px solid var(--border-color);
     border-radius: 5px;
     background-color: var(--background-color);
+    font-size: var(--small-text);
 }
 
 .users-search-bar:focus {
@@ -84,9 +85,10 @@
 .users-list {
     display: grid;
     grid-template-columns: 0.1fr repeat(5, 1fr);
-    padding: 1vh 0;
+    padding: 0.75vw 0;
     color: #706f6f;
     font-weight: 600;
+    font-size: var(--medium-text);
 }
 
 .users-list-top {
@@ -127,12 +129,13 @@
     display: flex;
     justify-content: flex-end;
     align-content: center;
+    font-size: var(--medium-text);
 }
 
 .users-list-bottom {
     display: grid;
-    grid-template-columns: 0.8fr 0.6fr 0.8fr 1fr;
-    width: 50%;
+    grid-template-columns: 0.8fr 0.4fr 0.6fr 1fr;
+    width: 60%;
 }
 
 .users-list-bottom>* {

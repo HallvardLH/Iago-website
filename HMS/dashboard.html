@@ -91,15 +91,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="date-input-container">
+                    <div class="input-field-container">
+                        <div class="info-header">Fra dato</div>
+                        <input type="date" class="date-input" />
+                    </div>
+                    <div class="input-field-container">
+                        <div class="info-header">Til dato</div>
+                        <input type="date" class="date-input" />
+                    </div>
+                </div>
                 <canvas class="graph-canvas" id="line-graph"></canvas>
                 <canvas class="graph-canvas" id="bar-graph"></canvas>
             </div>
         </div>
         <div class="calendar">
             <div class="calendar-top">
-                <i class="material-icons">chevron_left</i>
-                <div>Mai 2019</div>
-                <i class="material-icons">chevron_right</i>
+                <i class="material-icons" onclick="calendar.scroll_month(-1)">chevron_left</i>
+                <div id="calendar-month-display">Mai 2019</div>
+                <i class="material-icons" onclick="calendar.scroll_month(1)">chevron_right</i>
             </div>
             <div class="calendar-days">
                 <div>Man</div>
