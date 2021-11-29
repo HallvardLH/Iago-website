@@ -52,3 +52,14 @@ body {
 i {
     user-select: none;
 }
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: var(--secondary-color);
+}
+
+ ::selection {
+    color: white;
+    background: var(--secondary-color);
+}
