@@ -4,8 +4,8 @@ const chart = {
         networking.HTTPToDB({
             "query": {
                 "date_sent": {
-                    "$gte": "0636929574072",
-                    "$lt": "9637678645752"
+                    "$gte": "1635771600000", // First of November: 1635771600000
+                    "$lt": "1638277200000" // 30th of November: 1638277200000
                 }
             }
         }, "reports", chart.clean_data, "data", "albretsenconsulting");
@@ -32,7 +32,7 @@ const chart = {
             labels.push(key);
         }
 
-        chart.update_graph(chart.line_graph_instance, labels.reverse(), data.reverse(), label);
+        chart.update_graph(chart.line_graph_instance, labels, data, label);
         chart.update_buttons(JSON_data);
     },
 
