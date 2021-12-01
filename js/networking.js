@@ -1,8 +1,8 @@
 const networking = {
 
-    server_url: "http://3.135.49.222/hms",
-    // server_url: "http://iago.no/hms",
-    // server_url: "http://localhost:3001/hms",
+    //server_url: "https://3.135.49.222/hms",
+    server_url: "https://iago.no/hms",
+    //server_url: "http://localhost:3001/hms",
 
     database: "",
 
