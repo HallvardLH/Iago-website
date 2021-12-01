@@ -94,9 +94,15 @@ const chart = {
                 }
             },
             responsive: true,
+            maintainAspectRatio: true,
             scales: {
                 y: {
                     beginAtZero: true
+                }
+            },
+            elements: {
+                point: {
+                    radius: 0
                 }
             }
         }

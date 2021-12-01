@@ -48,3 +48,18 @@
 .sidenav-button-unselected {
     color: var(--light-gray-color) !important;
 }
+
+
+/* MEDIA QUERIES */
+
+
+/*
+    If screen size is that of vertical phone,
+    Move sidenav just off screen
+*/
+
+@media screen and (max-width: 420px) {
+    .sidenav {
+        left: -100vw;
+    }
+}

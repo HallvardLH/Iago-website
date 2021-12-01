@@ -7,7 +7,11 @@
 }
 
 .content-section {
-    margin: 20px;
+    /* margin: 20px; */
+}
+
+.graph-section>div {
+    margin: 1.5vw;
 }
 
 
@@ -79,4 +83,38 @@
     width: 100% !important;
     /* height: 30vh !important; */
     box-sizing: border-box;
+}
+
+.canvas-container {
+    margin: 2vw;
+}
+
+
+/* MEDIA QUERIES */
+
+
+/*
+    If screen size is that of vertical phone,
+    Change main grid to rows instead of columns, so they each take up the full with of the screen,
+    Remove relative position of main grid, which is only used to move it when the sidenav is present, which it is not on mobile
+    Make its width 100vw (fills whole width of screen)
+*/
+
+@media screen and (max-width: 420px) {
+    .main-grid {
+        grid-template-columns: none;
+        grid-template-rows: 1.5fr 1fr;
+        position: static;
+        width: 92vw;
+    }
+    .content-section {
+        margin: 0;
+        padding: 2vw;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .top-button {
+        width: 30vw;
+        height: 30vw;
+    }
 }

@@ -35,6 +35,14 @@
     --big-text: 1.6vw;
 }
 
+@media screen and (max-width: 420px) {
+     :root {
+        --small-text: 3.5vw;
+        --medium-text: 4vw;
+        --big-text: 5vw;
+    }
+}
+
 html {
     font-size: 16px;
 }
