@@ -6,9 +6,10 @@
     padding-right: 20px;
 }
 
-.content-section {
-    /* margin: 20px; */
-}
+
+/* .content-section {
+    margin: 20px;
+} */
 
 .graph-section>div {
     margin: 20px;
@@ -110,7 +111,7 @@
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     .main-grid {
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr;
@@ -118,9 +119,9 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .top-button {
+    /* .top-button {
         width: 100%;
-    }
+    } */
 }
 
 
