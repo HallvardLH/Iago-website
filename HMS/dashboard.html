@@ -16,12 +16,62 @@
 </head>
 
 <body>
-    <div id="sidenav" class="sidenav">
-        <div class="sidenav-top">
-            <div id="ikke_logget_inn" class="sidenav-username">
+    <div class="mobile-navigation mn-collapsed" id="mn">
+        <div class="mobile-navigation-top">
+            <i class="material-icons sidenav-button-icon" onclick="UI.toggle_nav()">menu</i>
+            <img src="../images/iago-hms-logo-white.png" class="mobile-navigation-logo" />
+            <i class="material-icons sidenav-button-icon"></i>
+        </div>
+        <div class="navigation-user">
+            <div id="ikke_logget_inn" class="navigation-username">
                 Hallvard Hetlelid
             </div>
-            <div id="sidenav-email" class="sidenav-email">
+            <div id="sidenav-email" class="navigation-email">
+                sample@iago.no
+            </div>
+        </div>
+        <div class="mobile-navigation-buttons">
+
+        </div>
+        <div class="sidenav-buttons">
+            <a href="dashboard.html" class="sidenav-button sidenav-button-selected">
+                <i class="material-icons sidenav-button-icon">dashboard</i>
+                <div id="min_bruker" class="sidenav-button-text">
+                    Dashboard
+                </div>
+            </a>
+            <a href="administrer-brukere.html" class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">admin_panel_settings</i>
+                <div id="innstillinger" class="sidenav-button-text">
+                    Administrer brukere
+                </div>
+            </a>
+            <div class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">help</i>
+                <div id="iago_hjelp" class="sidenav-button-text">
+                    Iago Hjelp
+                </div>
+            </div>
+            <div class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">settings</i>
+                <div id="om_iago" class="sidenav-button-text">
+                    Innstillinger
+                </div>
+            </div>
+            <div class="sidenav-button sidenav-button-unselected">
+                <i class="material-icons sidenav-button-icon">logout</i>
+                <div id="logg_ut" class="sidenav-button-text">
+                    Logg ut
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sidenav" class="sidenav">
+        <div class="navigation-user">
+            <div id="ikke_logget_inn" class="navigation-username">
+                Hallvard Hetlelid
+            </div>
+            <div id="sidenav-email" class="navigation-email">
                 sample@iago.no
             </div>
         </div>

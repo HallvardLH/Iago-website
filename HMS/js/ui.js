@@ -14,5 +14,16 @@ const UI = {
         chart.update_graph_request();
     },
 
+    nav_expanded: false,
+    toggle_nav() {
+        if (!this.nav_expanded) {
+            byId("mn").setAttribute("class", "mobile-navigation mn-expanded");
+            this.nav_expanded = true;
+        } else {
+            byId("mn").setAttribute("class", "mobile-navigation mn-collapsed");
+            this.nav_expanded = false;
+        }
+    }
+
 
 }

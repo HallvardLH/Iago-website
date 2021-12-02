@@ -71,9 +71,10 @@
     border: 2px solid var(--border-color);
     border-radius: 5px;
     background-color: var(--background-color);
-    font-size: var(--big-text);
+    font-size: var(--small-text);
     font-family: 'RobotoRegular';
     color: var(--light-gray-color);
+    width: 120px;
 }
 
 .date-input:focus {
@@ -85,11 +86,6 @@
 /* .input-field-container {} */
 
 .info-header {
-    left: 1vw;
-    /* top: 1.5vh; */
-    position: relative;
-    width: fit-content;
-    width: -moz-fit-content;
     color: var(--light-gray-color);
     font-size: var(--small-text);
     letter-spacing: 0.1vw;
@@ -104,7 +100,7 @@
     If screen size is that of vertical phone,
 */
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 700px) {
     .date-input {
         padding: 2vw;
         font-size: var(--medium-text);

@@ -1,9 +1,9 @@
 .main-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    position: relative;
-    left: 16vw;
-    width: 82vw;
+    max-width: 1300px;
+    padding-left: 200px;
+    padding-right: 20px;
 }
 
 .content-section {
@@ -11,7 +11,7 @@
 }
 
 .graph-section>div {
-    margin: 1.5vw;
+    margin: 20px;
 }
 
 
@@ -23,28 +23,20 @@
     gap: 2vw; */
     display: flex;
     justify-content: space-between;
-    gap: 3.5vw;
+    gap: .5vw;
 }
 
 .top-button {
-    /* align-items: center;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    padding: 1rem 0;
-    border-radius: 0.35rem; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     box-shadow: var(--box-shadow);
-    border-radius: 0.35rem;
-    width: 10vw;
-    height: 10vw;
+    border-radius: 6px;
+    width: 125px;
+    height: 125px;
     cursor: pointer;
-    padding: 1vh;
+    padding: 6px;
 }
 
 .top-button-selected {
@@ -58,7 +50,7 @@
 }
 
 .top-button-icon {
-    padding-bottom: calc(0.6vw + 0.6vh);
+    padding-bottom: 10px;
     font-size: calc(var(--big-text) * 1.6);
     user-select: none;
 }
@@ -69,7 +61,7 @@
 }
 
 .top-button-sub-text {
-    padding-top: calc(0.6vw + 0.6vh);
+    padding-top: 10px;
     font-size: var(--small-text);
     letter-spacing: 0.5px;
 }
@@ -94,17 +86,16 @@
 
 
 /*
-    If screen size is that of vertical phone,
-    Change main grid to rows instead of columns, so they each take up the full with of the screen,
-    Remove relative position of main grid, which is only used to move it when the sidenav is present, which it is not on mobile
-    Make its width 100vw (fills whole width of screen)
+    If screen size is that of a vertical phone,
 */
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 700px) {
     .main-grid {
         grid-template-columns: none;
         grid-template-rows: 1.5fr 1fr;
         position: static;
+        /* padding: 50px 0 0 0; */
+        padding: 0;
         width: 92vw;
     }
     .content-section {
@@ -116,5 +107,45 @@
     .top-button {
         width: 30vw;
         height: 30vw;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main-grid {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .top-button {
+        width: 100%;
+    }
+}
+
+
+/*
+    If screen width is larger than 1500px,
+    Apply margin:auto on main-grid,
+    And make the width smaller so as to make the element centered,
+
+    Set the size of the top buttons to static,
+    This means the elements do not become endlessly longer as the screen scales upward
+*/
+
+@media screen and (min-width: 1280px) {
+    .main-grid {
+        margin: auto;
+    }
+    .top-button {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .top-button {
+        width: 175px;
+        height: 175px;
     }
 }
