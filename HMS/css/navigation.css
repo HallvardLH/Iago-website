@@ -2,37 +2,35 @@
     height: 100%;
     border-right: 1px solid var(--border-color);
     position: fixed;
-    width: 16vw;
+    width: 200px;
     top: 0;
 }
 
-.sidenav a {
+.sidenav a,
+.mobile-navigation a {
     text-decoration: none;
 }
 
-
-/* NEW DESIGN */
-
-.sidenav-top {
+.navigation-user {
     color: var(--light-gray-color);
-    padding: 25px 1rem 1rem 1rem;
+    padding: 20px;
     border-bottom: 1px solid var(--border-color);
 }
 
-.sidenav-username {
-    font-size: calc(var(--big-text) + 0.1vw);
+.navigation-username {
+    font-size: calc(var(--big-text) + 2px);
     font-weight: 600;
 }
 
-.sidenav-email {
+.navigation-email {
     font-size: var(--medium-text);
 }
 
 .sidenav-button {
     display: grid;
-    grid-template-columns: 0.1fr 0.9fr;
-    gap: 1vw;
-    padding: 1vw 0.2vw 1vw 1vw;
+    grid-template-columns: 0.1fr 1fr;
+    gap: 10px;
+    padding: 16px 4px 16px 20px;
 }
 
 .sidenav-button-text {
@@ -46,5 +44,95 @@
 }
 
 .sidenav-button-unselected {
-    color: var(--light-gray-color) !important;
+    color: var(--light-gray-color);
+}
+
+
+/* MOBILE NAVIGATION */
+
+.mobile-navigation {
+    display: none;
+    /* position: fixed;
+    top: 0; */
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 18px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.mn-collapsed {
+    height: 70px;
+}
+
+.mn-expanded {
+    height: auto;
+}
+
+.mobile-navigation-top {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    height: 100%;
+}
+
+.mobile-navigation-top>i {
+    font-size: 34px;
+    color: var(--background-color);
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.mobile-navigation-logo {
+    height: 40px;
+    width: 44px;
+    justify-self: center;
+    align-self: center;
+}
+
+.mobile-navigation .navigation-user {
+    color: var(--background-color);
+    padding: 14px 0;
+    border-bottom: none;
+}
+
+.mobile-navigation .sidenav-button {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    gap: 4px;
+    padding: 12px 0;
+    border-top: 1px solid var(--dark-border-color);
+}
+
+.mobile-navigation .sidenav-button-text {
+    align-self: center;
+    font-size: var(--medium-text);
+}
+
+.mobile-navigation .sidenav-button-selected {
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    /* text-decoration: underline; */
+}
+
+.mobile-navigation .sidenav-button-unselected {
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+}
+
+
+/* MEDIA QUERIES */
+
+
+/*
+    If screen size is that of vertical phone,
+    Move sidenav just off screen
+*/
+
+@media screen and (max-width: 700px) {
+    .sidenav {
+        left: -100vw;
+    }
+    .mobile-navigation {
+        display: block;
+    }
 }

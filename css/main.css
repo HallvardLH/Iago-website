@@ -27,13 +27,31 @@
     --dark-gray-color: #282828;
     --light-gray-color: #636365;
     --border-color: #ebebeb;
+    --dark-border-color: #919191;
     --highlight-color: #e6def2;
     --background-color: #F7F7FC;
     --box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
-    --small-text: 1vw;
-    --medium-text: 1.2vw;
-    --big-text: 1.6vw;
+    --small-text: 13px;
+    --medium-text: 15px;
+    --big-text: 20px;
 }
+
+
+/* @media screen and (min-width: 1500px) {
+    .main-grid {
+        --small-text: 1rem;
+        --medium-text: 1.2rem;
+        --big-text: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+     :root {
+        --small-text: 3.5vw;
+        --medium-text: 4vw;
+        --big-text: 5vw;
+    }
+} */
 
 html {
     font-size: 16px;
