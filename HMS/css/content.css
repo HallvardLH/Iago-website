@@ -16,6 +16,28 @@
 }
 
 
+/* 
+CHANGES BACKGROUND COLOR ON HOVER, STARTING IN THE CENTER AND EXPANDING FROM THERE.
+WAS A LITTLE TOO INTENSE MAYBE. 
+KEEPING IT FOR NOW.
+*/
+
+
+/* .hover-fill {
+    background-size: 0% 0%;
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: background-size .25s, color .25s, background-image .25s;
+}
+
+.top-button:hover {
+    background-size: 100% 100%;
+    background-image: linear-gradient(var(--secondary-color), var(--secondary-color));
+    color: #fff;
+} */
+
+
 /* BUTTONS USED TO SWITCH BETWEEN GRAPHS */
 
 .top-button-container {
@@ -38,6 +60,11 @@
     height: 125px;
     cursor: pointer;
     padding: 6px;
+}
+
+.top-button-unselected:hover {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 .top-button-selected {

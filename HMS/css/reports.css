@@ -1,0 +1,136 @@
+/* HEADER */
+
+.reports-header {
+    text-align: center;
+    font-size: var(--small-text);
+}
+
+
+/* REPORT MENU SEARCH  */
+
+.report-menu-search {
+    display: flex;
+}
+
+.report-menu-search-bar {
+    border: solid #adadad 1px;
+    /* border-radius: 6px; */
+    border-radius: 6px 0 0 6px;
+    border-right: none;
+    color: var(--main-color);
+    background-color: var(--background-color);
+    font-family: 'RobotoRegular';
+    font-size: var(--medium-text);
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.report-menu-search-bar:focus {
+    border: solid var(--main-color) 1px;
+}
+
+.search-icon-container {
+    background-color: var(--background-color);
+    border: solid #adadad 1px;
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+    display: flex;
+    width: 10%;
+}
+
+.searchIcon {
+    align-self: center;
+}
+
+
+/* REPORT FILTER */
+
+.filter-container {
+    margin-top: 6px;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    font-family: 'RobotoRegular';
+}
+
+
+/* REPORTS */
+
+.reports-container {
+    /* display: grid;
+    grid-template-rows: 0.1fr 0.1fr 1fr; */
+    padding: 14px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    /* height: fit-content;
+    height: -moz-fit-content; */
+    /* min-height: 40%;
+    margin: 20px 20px 20px 0; */
+}
+
+.report-author-display {
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.reportSection {
+    border-bottom: solid var(--border-color) 1px;
+    padding: 14px 0;
+    color: var(--dark-gray-color);
+    font-family: 'RobotoRegular';
+    display: grid;
+    grid-template-columns: 0.87fr 0.13fr;
+    grid-template-rows: 1fr;
+    word-break: break-word;
+}
+
+.reportTitle,
+.reportInfo {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    /* line-break: anywhere; */
+}
+
+.reportSeen {
+    font-size: 4vw;
+    margin-bottom: 4vw;
+}
+
+.report-preview {
+    margin-top: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.report-display-icon {
+    justify-content: center;
+    align-self: flex-start;
+    display: flex;
+}
+
+.reportIcon {
+    border-radius: 180px;
+    padding: 2px;
+    color: white;
+    font-size: var(--big-text);
+}
+
+.reportRead {
+    background-color: var(--read-color);
+}
+
+.reportUnread {
+    background-color: var(--unread-color);
+}
+
+.reportUrgent {
+    background-color: var(--urgent-color);
+}

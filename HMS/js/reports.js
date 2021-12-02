@@ -11,20 +11,35 @@ const reports = {
         }, "reports", reports.build_html, "get", "albretsenconsulting");
     },
 
-    build_html: function() {
+    /**
+     * 
+     * @param {A report object} report 
+     * Takes a report, and adds it to the list of reports.
+     */
+    build_report_row: function(report) {
+        console.log(report)
+        var title = report.title;
+        var description = report.description;
+        if (report.title == "") {
+            title = i18n.get("ingen_tittel");
+        }
+        if (report.description == "") {
+            console.log("thest " + i18n.get("ingen_beskrivelse"))
+            description = i18n.get("ingen_beskrivelse");
+        }
         var icon_style = "reportUnread";
         var icon_name = "schedule"
         const container = create_element("DIV", ["class", "reportSection", "onclick", ""]);
         const text_container = create_element("DIV", ["class", "report-display-text"]);
 
-        const author = create_element("DIV", ["class", "report-author-display"], "NAVN HER - 1.12.2021");
+        const author = create_element("DIV", ["class", "report-author-display"], `${report.author_name} - ${report.date_sent}`);
         text_container.appendChild(author);
 
-        const title = create_element("DIV", ["class, reportTitle"], "Tittle her");
-        text_container.appendChild(title);
+        const title_div = create_element("DIV", ["class", "reportTitle"], `${title}`);
+        text_container.appendChild(title_div);
 
-        const description = create_element("DIV", ["class, report-preview"], "Beskrivelse her");
-        text_container.appendChild(description);
+        const description_div = create_element("DIV", ["class", "report-preview"], `${description}`);
+        text_container.appendChild(description_div);
 
         container.appendChild(text_container);
 
@@ -34,30 +49,23 @@ const reports = {
 
         container.appendChild(icon_container);
 
-        byId("reportAnchor").appendChild(container);
-    }
+        byId("report-anchor").appendChild(container);
+    },
 
     /**
      * 
      * @param {A string, which is a list of report objects} reports 
      * Goes through each report, then calls reports.build_report_row to generate each row of reports.
      */
-        build_html: function(reports) {
-        reports = JSON.parse(reports);
+    build_html: function(reports_) {
+        reports_ = JSON.parse(reports_);
+        console.log("AMOUNT OF REPROTS RECEIVED: " + reports_.length);
 
-        reports.forEach(report => {
-            reports.build_report_row(report)
+        reports_.forEach(report => {
+            console.log("REPORT: " + report.title);
+            reports.build_report_row(report);
         });
     },
-
-    /**
-     * 
-     * @param {A report object} report 
-     * Takes a report, and adds it to the list of reports.
-     */
-    build_report_row: function(report) {
-
-    }
 
 }
 

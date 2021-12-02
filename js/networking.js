@@ -22,7 +22,7 @@ const networking = {
         let url = this.server_url + "/" + action;
         http.open("POST", url);
         http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        http.setRequestHeader('Access-Control-Allow-Origin', '*');
+        http.setRequestHeader('Access-Control-Allow-Origin', 'http://iago.no/hms');
         http.setRequestHeader('Access-Control-Allow-Credentials', 'true');
         http.send(JSON.stringify(body));
 
