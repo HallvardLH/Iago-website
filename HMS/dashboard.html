@@ -115,31 +115,37 @@
                 <div class="top-button-container">
                     <div id="kostnad-graph-button" class="top-button top-button-selected hover-fill" onclick="UI.switch_graph('kostnad')">
                         <i class="material-icons top-button-icon">attach_money</i>
-                        <div id="total-cost" class="top-button-main-text">
-                            0 NOK
-                        </div>
-                        <div class="top-button-sub-text">
-                            Kostnad
+                        <div class="top-button-text-grid">
+                            <div id="total-cost" class="top-button-main-text">
+                                0 NOK
+                            </div>
+                            <div class="top-button-label">
+                                Kostnad
+                            </div>
                         </div>
                     </div>
 
                     <div id="rapporter-graph-button" class="top-button top-button-unselected hover-fill" onclick="UI.switch_graph('rapporter')">
                         <i class="material-icons top-button-icon">apps</i>
-                        <div id="total-reports" class="top-button-main-text">
-                            0
-                        </div>
-                        <div class="top-button-sub-text">
-                            Rapporter
+                        <div class="top-button-text-grid">
+                            <div id="total-reports" class="top-button-main-text">
+                                0
+                            </div>
+                            <div class="top-button-label">
+                                Rapporter
+                            </div>
                         </div>
                     </div>
 
                     <div id="ubehandlede-rapporter-graph-button" class="top-button top-button-unselected hover-fill" onclick="UI.switch_graph('ubehandlede-rapporter')">
                         <i class="material-icons top-button-icon">warning</i>
-                        <div class="top-button-main-text">
-                            9
-                        </div>
-                        <div class="top-button-sub-text">
-                            Ubehandlede rapporter
+                        <div class="top-button-text-grid">
+                            <div class="top-button-main-text">
+                                9
+                            </div>
+                            <div class="top-button-label">
+                                Ubehandlede rapporter
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -192,7 +198,7 @@
                 <div id="bare_vis_ubehandlede_saker" class="filter-title">Bare vis saker under behandling</div>
             </div>
 
-            <div id="report-anchor"></div>
+            <div class="reports-list" id="report-anchor"></div>
         </div>
     </div>
 </body>
@@ -200,6 +206,7 @@
 </html>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../js/helper_functions.js"></script>
 <script src="../js/networking.js"></script>
 <script src="../i18n/i18n.js"></script>

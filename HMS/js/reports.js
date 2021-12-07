@@ -27,8 +27,25 @@ const reports = {
             console.log("thest " + i18n.get("ingen_beskrivelse"))
             description = i18n.get("ingen_beskrivelse");
         }
-        var icon_style = "reportUnread";
-        var icon_name = "schedule"
+        var icon_style;
+        var icon_name;
+        // Determine which icon to use
+        switch (report.status) {
+            case 'In review':
+                let current_date = new Date().getTime().toString();
+                if ((parseInt(current_date) - parseInt(report.date_sent)) > 2628000000) { // If the report was made long ago and is still not done, make urgent. (I don't remember how long)
+                    icon_name = 'priority_high';
+                    icon_style = 'reportUrgent';
+                } else { // Else just make icon unreviewed
+                    icon_name = 'schedule';
+                    icon_style = 'reportUnread';
+                }
+                break;
+            case 'Done':
+                icon_name = 'done';
+                icon_style = 'reportRead';
+                break;
+        }
         const container = create_element("DIV", ["class", "reportSection", "onclick", ""]);
         const text_container = create_element("DIV", ["class", "report-display-text"]);
 
@@ -66,6 +83,10 @@ const reports = {
             reports.build_report_row(report);
         });
     },
+
+    /** Automatically load more reports once at bottom */
+
+    // byId("report-anchor").scrollTop
 
 }
 

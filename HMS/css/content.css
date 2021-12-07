@@ -65,6 +65,7 @@ KEEPING IT FOR NOW.
 .top-button-unselected:hover {
     background-color: var(--secondary-color);
     color: white;
+    transition: 0.2s;
 }
 
 .top-button-selected {
@@ -88,10 +89,14 @@ KEEPING IT FOR NOW.
     font-size: var(--big-text);
 }
 
-.top-button-sub-text {
+.top-button-label {
     padding-top: 10px;
     font-size: var(--small-text);
     letter-spacing: 0.5px;
+}
+
+.top-button-text-grid {
+    display: grid;
 }
 
 
@@ -132,9 +137,28 @@ KEEPING IT FOR NOW.
         width: 100vw;
         box-sizing: border-box;
     }
+    .top-button-container {
+        flex-direction: column;
+    }
     .top-button {
-        width: 30vw;
-        height: 30vw;
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        width: 100%;
+        height: 60px;
+        text-align: unset;
+        margin: 4px 0;
+    }
+    .top-button-text-grid {
+        grid-template-rows: 0.1fr 1fr;
+    }
+    .top-button-label {
+        grid-row: 1;
+    }
+    .top-button-icon {
+        justify-self: center;
+        align-self: center;
+        padding: 0;
+        font-size: 40px;
     }
 }
 

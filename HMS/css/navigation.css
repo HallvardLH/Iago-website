@@ -100,7 +100,7 @@
     grid-template-columns: 0.1fr 1fr;
     gap: 4px;
     padding: 12px 0;
-    border-top: 1px solid var(--dark-border-color);
+    border-top: 1px solid var(--purple-border-color);
 }
 
 .mobile-navigation .sidenav-button-text {

@@ -3,14 +3,15 @@
 .new-report-button {
     display: grid !important;
     grid-template-columns: 0.1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0.5vw;
+    gap: 10px;
     background-color: var(--main-color);
-    border-radius: 20vw;
-    padding: 0.1vh 1vw;
+    border-radius: 50px;
+    padding: 2px 6px;
     color: white;
     box-shadow: 0px 8px 8px 0px rgb(0 0 0 / 25%);
     white-space: nowrap;
+    max-width: 150px;
+    max-height: 40px;
 }
 
 .new-report-button-text {
@@ -34,78 +35,79 @@
     grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
     box-shadow: var(--box-shadow);
     position: relative;
-    left: 16vw;
-    width: 78vw;
+    margin: 20px;
+    margin-left: 220px;
     padding: 1vw;
-    margin: 2vw;
     height: 85vh;
     max-height: 85vh;
+    max-width: 1300px;
     overflow: hidden;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .users-top {
     display: grid;
-    grid-template-columns: 60vw 1fr 0.25fr;
-    gap: 2vw;
+    grid-template-columns: 1fr 0.3fr 0.3fr;
+    gap: 10px;
 }
 
-.users-top div,
+
+/* .users-top div,
 .users-top input,
 .users-top i {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
+} */
 
 .users-top i {
     color: #706f6f;
 }
 
+.users-search {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    border: solid #adadad 1px;
+    border-radius: 5px;
+}
+
 .users-search-icon {
-    left: 1.5vw;
-    position: absolute;
     font-size: calc(var(--big-text) * 1.5);
 }
 
 .users-search-bar {
     width: 90%;
-    padding: 2vh 1.5vw 2vh 4vw;
-    border: 2px solid var(--border-color);
-    border-radius: 5px;
+    padding: 10px;
+    border: none;
     background-color: var(--background-color);
     font-size: var(--small-text);
 }
 
 .users-search-bar:focus {
-    transition: 50ms;
-    outline: 2px solid var(--main-color);
+    outline: none;
 }
 
 .users-list {
     display: grid;
     grid-template-columns: 0.1fr repeat(5, 1fr);
-    padding: 0.75vw 0;
+    padding: 10px 0;
     color: #706f6f;
     font-weight: 600;
-    font-size: var(--medium-text);
+    font-size: var(--small-text);
 }
 
 .users-list-top {
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 2vh;
+    /* padding-bottom: 2vh; */
 }
 
 .users-list>* {
-    margin-left: 2vw;
+    margin-left: 10px;
     align-self: center;
 }
 
-.users-list-checkbox {
-    align-self: center;
-    margin-left: 0.3vw;
-    zoom: 1.5;
-}
+.users-list-checkbox {}
 
 .user-link {
     color: #2F80ED;

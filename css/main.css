@@ -27,7 +27,7 @@
     --dark-gray-color: #282828;
     --light-gray-color: #636365;
     --border-color: #ebebeb;
-    --dark-border-color: #919191;
+    --purple-border-color: #8973c3;
     --highlight-color: #e6def2;
     --background-color: #F7F7FC;
     --box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
@@ -80,4 +80,9 @@ i {
  ::selection {
     color: white;
     background: var(--secondary-color);
+}
+
+.search-focus {
+    transition: 50ms;
+    outline: 1.5px solid var(--main-color);
 }

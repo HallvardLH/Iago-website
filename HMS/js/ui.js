@@ -27,3 +27,17 @@ const UI = {
 
 
 }
+
+
+/* 
+ * Using jquery to add and remove outline from search bar on focus,
+ * this is necessary to include icons inside the search bar.
+ */
+$(".users-search-bar").focus(
+    function() {
+        $(".users-search").addClass("search-focus");
+    });
+$(".users-search-bar").focusout(
+    function() {
+        $(".users-search").removeClass("search-focus");
+    });

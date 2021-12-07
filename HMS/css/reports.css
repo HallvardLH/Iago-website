@@ -47,7 +47,7 @@
 /* REPORT FILTER */
 
 .filter-container {
-    margin-top: 6px;
+    margin: 6px 0;
     display: grid;
     grid-template-columns: 0.1fr 1fr;
     font-family: 'RobotoRegular';
@@ -69,6 +69,12 @@
     height: -moz-fit-content; */
     /* min-height: 40%;
     margin: 20px 20px 20px 0; */
+}
+
+.reports-list {
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .report-author-display {
